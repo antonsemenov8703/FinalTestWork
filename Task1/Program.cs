@@ -1,25 +1,25 @@
-﻿string [] array = {"Russia", "Denmark","UK","Finland", "USA", "India" , "Peru"};
+﻿string[] array = { "Russia", "Denmark", "UK", "Finland", "USA", "India", "Peru" };
 int count = 0;
 CountShortLines(array);
-string [] resultArray = new string[10];
+string[] resultArray = new string[10];
 FillArrayWithShortLines(array);
 PrintArray(resultArray);
 
-void CountShortLines(string[]arr1)
+void CountShortLines(string[] arr1)
 {
     count = 0;
-    for (int i=0; i<arr1.Length;i++)
+    for (int i = 0; i < arr1.Length; i++)
     {
-        if (arr1[i].Length<=3) count++;
+        if (arr1[i].Length <= 3) count++;
     }
 }
 
-void FillArrayWithShortLines(string[]arr)
+void FillArrayWithShortLines(string[] arr)
 {
     int j = 0;
-    for (int i=0;i<arr.Length;i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length<=3)
+        if (arr[i].Length <= 3)
         {
             resultArray[j] = arr[i];
             j++;
