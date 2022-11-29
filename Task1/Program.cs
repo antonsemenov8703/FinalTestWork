@@ -1,11 +1,36 @@
-﻿//Console.WriteLine("Введите массив строк:");
-string [] array = {"Russia", "Denmark", "USA"};
+﻿string [] array = {"Russia", "Denmark","UK","Finland", "USA", "India" , "Peru"};
+int count = 0;
+CountShortLines(array);
 string [] resultArray = new string[10];
-for (int i=0; i<array.Length;i++)
+FillArrayWithShortLines(array);
+PrintArray(resultArray);
+
+void CountShortLines(string[]arr1)
 {
-    if (array[i].Length<=3)
+    count = 0;
+    for (int i=0; i<arr1.Length;i++)
     {
-        Console.WriteLine($"{array[i]}");
-        resultArray[] = array[i];
+        if (arr1[i].Length<=3) count++;
+    }
+}
+
+void FillArrayWithShortLines(string[]arr)
+{
+    int j = 0;
+    for (int i=0;i<arr.Length;i++)
+    {
+        if (arr[i].Length<=3)
+        {
+            resultArray[j] = arr[i];
+            j++;
+        }
+    }
+}
+
+void PrintArray(string[] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        Console.Write($"{matr[i]} ");
     }
 }
